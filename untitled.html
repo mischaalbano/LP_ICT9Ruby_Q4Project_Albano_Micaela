@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Events and Functions</title>
+</head>
+<body>
+	<form>
+		<input type="text" placeholder="Enter the 1st number" id="id1"><br>
+		<input type="text" placeholder="Enter the 2nd number" id="id2"><br>
+			<input type="submit" value="Multiply" onclick="Compute()">
+			<input type="submit" value="Divide" onclick="Divide()">
+			<input type="submit" value="Subtract" onclick="Subtraction()">
+			<input type="submit" value="Add" onclick="Addition()">
+	</form>
+	<script type="text/javascript">
+		function Compute() {
+			num1 = document.getElementById('id1').value;
+			num2 = document.getElementById('id2').value;
+			product = num1 * num2;
+				window.alert(product);
+		}
+		function Divide() {
+			num1 = document.getElementById('id1').value;
+			num2 = document.getElementById('id2').value;
+			quotient = num1 / num2;
+				window.alert(quotient);
+		}
+		function Subtraction() {
+			num1 = document.getElementById('id1').value;
+			num2 = document.getElementById('id2').value;
+			difference = num1 - num2;
+				window.alert(difference);
+		}
+		function Addition() {
+			num1 = Number(document.getElementById('id1').value;
+			num2 = Number(document.getElementById('id2').value;
+			sum = num1 + num2;
+				window.alert(sum);
+		}
+	</script>
+</body>
+</html>

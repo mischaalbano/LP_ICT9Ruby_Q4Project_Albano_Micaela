@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Events</title>
+</head>
+<body>
+	<form>
+		<input type="text" id="id1" placeholder="Enter the 1st number">
+		<input type="text" id="id2" placeholder="Enter the 2nd number">
+			<input type="submit" value="Convert" onkeydown="convert()">
+	</form>
+<script>
+	function convert() {
+		var var1 = document.getElementById('id1').value;
+		var var2 = document.getElementById('id2').value;
+		var concatenation = var1 + var2
+			window.alert(concatenation)
+	}
+</script>
+</body>
+</html>

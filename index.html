@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2023-2024</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Light gray background color */
+            color: #333; /* Dark gray text color */
+        }
+
+        header {
+            display: none; /* Hide navigation header initially */
+        }
+
+        .brand img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .search input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Main Page Styles */
+        #mainPage {
+            text-align: center;
+        }
+
+        #mainPage h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #mainPage button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form id="login">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" id="loginBtn">Log in</button>
+        </form>
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="brand">
+            <img src="Portfolio 2023-2024.png" alt="Portfolio 2023-2024">
+        </div>
+        <div class="search">
+            <input type="text" id="searchBox" placeholder="Search">
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+
+    <!-- Page Content (Main Page) -->
+    <div id="mainPage">
+        <h2>Welcome to your portfolio!</h2>
+        <button id="firstQuarterPageBtn">First Quarter Files</button>
+        <button id="secondQuarterPageBtn">Second Quarter Files</button>
+        <button id="thirdQuarterPageBtn">Third Quarter Files</button>
+        <button id="whatsNextPageBtn">What's Next?</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const loginBtn = document.getElementById('loginBtn');
+            const mainPage = document.getElementById('mainPage');
+            const header = document.querySelector('header');
+
+            // Hide Main Page and Navigation Header Initially
+            mainPage.style.display = 'none';
+            header.style.display = 'none';
+
+            // Login Button Click Event
+            loginBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                loginForm.style.display = 'none';
+                mainPage.style.display = 'block';
+                header.style.display = 'block'; // Show Navigation Header after login
+            });
+
+            // First Quarter Page Button Click Event
+            const firstQuarterPageBtn = document.getElementById('firstQuarterPageBtn');
+            firstQuarterPageBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'first_quarter.html'; // Navigate to First Quarter Page
+            });
+
+            // Second Quarter Page Button Click Event
+            const secondQuarterPageBtn = document.getElementById('secondQuarterPageBtn');
+            secondQuarterPageBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'second_quarter.html'; // Navigate to Second Quarter Page
+            });
+
+            // Third Quarter Page Button Click Event
+            const ThirdQuarterPageBtn = document.getElementById('thirdQuarterPageBtn');
+            thirdQuarterPageBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'third_quarter.html'; // Navigate to Third Quarter Page
+            });
+
+
+            // What's Next Page Button Click Event
+            const WhatsNextPageBtn = document.getElementById('whatsNextPageBtn');
+            whatsNextPageBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'whats_next.html'; // Navigate to Whats Next Page
+            });
+        });
+    </script>
+</body>
+</html>
